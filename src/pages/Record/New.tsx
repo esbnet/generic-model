@@ -5,11 +5,18 @@ import { RecordForm } from './Form';
 export const RecordNew = <T extends Record>({
   FormFields,
   activeRecord,
+  create,
+  success,
 }: RecordNewProps<T>) => {
   return (
     <div className="new">
       <h2>New</h2>
-      <RecordForm FormFields={FormFields} activeRecord={activeRecord} />
+      <RecordForm
+        FormFields={FormFields}
+        activeRecord={activeRecord}
+        submitAction={create}
+        success={success}
+      />
     </div>
   );
 };
