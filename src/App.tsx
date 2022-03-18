@@ -1,9 +1,11 @@
+import { FC } from 'react';
+
 import { Header } from './components/Header';
 import { Page, usePage } from './contexts/Page';
 import { ArticleIndex } from './pages/Article';
 import { AuthorIndex } from './pages/Author';
 
-const App: React.FC = () => {
+const App: FC = () => {
   const { page } = usePage();
 
   const renderSwitch = () => {
